@@ -53,16 +53,16 @@ public class CustomerInfo {
 		
 		for(int i=0;i<n;i++)
 		{
-			    System.out.print("Name: ");
-	            String name = sc.nextLine();
+			    System.out.println("Name: ");
+	            String name = sc.next();
 	            
-	            System.out.print("email: ");
-	            String email = sc.nextLine();
+	            System.out.println("email: ");
+	            String email = sc.next();
 	            
-	            System.out.print("mob: ");
+	            System.out.println("mob: ");
 	            int mob = sc.nextInt();
 	            
-	            System.out.print("age: ");
+	            System.out.println("age: ");
 	            int age =sc.nextInt();
 	            
 	            customerList.add(new Customer(name,email,mob,age));
@@ -83,4 +83,4 @@ public class CustomerInfo {
 	
 	}
 
-	}
+}
