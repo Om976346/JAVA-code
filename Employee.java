@@ -1,0 +1,80 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class EmployeeInfo {
+    private String name;
+    private int age;
+    private double salary;
+
+    public EmployeeInfo(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
+
+    // Getters and setters
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+}
+
+public class Employee {
+    public static void main(String[] args) {
+        ArrayList<Employee> employees = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter employee information or type 'exit' to finish:");
+
+        while (true) {
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+
+            if (name.equals("exit")) {
+                break;
+            }
+
+            System.out.print("Age: ");
+            int age = scanner.nextInt();
+
+            System.out.print("Salary: ");
+            double salary = scanner.nextDouble();
+
+            scanner.nextLine(); 
+           
+            EmployeeInfo employee = new EmployeeInfo(name, age, salary);
+            employees.add(employee);
+        }
+
+        // Display the employee information
+        System.out.println("\nEmployee Information:");
+        for (Employee employee : employees) {
+            System.out.println("Name: " + employee.getName());
+            System.out.println("Age: " +employee.getAge());
+            System.out.println("Salary: " +employee.getSalary());
+            System.out.println();
+        }
+
+       
+    }
+}
